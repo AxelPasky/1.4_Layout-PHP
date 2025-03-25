@@ -23,4 +23,4 @@ This repository contains exercises designed to test knowledge of POO in PHP.
 - A local server like XAMPP, MAMP, or LAMP to run PHP scripts
 
 ## 👤 Author
-Developed by **AxelPasky**. 
+Developed by **AxelPasky**. Peer corrected **MichelleDiTerlizzi**.
