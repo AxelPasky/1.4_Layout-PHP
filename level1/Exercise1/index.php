@@ -3,12 +3,18 @@ declare(strict_types=1);
 
 require 'Classes/employee.php';
 
-$employee_1 = new Employee("Alex",4000);
-$employee_2 = new Employee("Vera",6000);
+$employee_1 = new Employee();
+
+$employee_1->initialize("Alex",5400);
+
+$employee_2 = new Employee();
+
+$employee_2->initialize("Ines",7000);
 
 
-echo $employee_1->print();
-echo $employee_2->print();
+
+$employee_1->print();
+$employee_2->print();
 
 
 

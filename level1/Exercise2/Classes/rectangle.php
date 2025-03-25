@@ -4,7 +4,7 @@ require_once 'Shape.php';
 
 class Rectangle extends Shape{
 
-    function area():float {
+    public function area():float {
         $area=$this->height*$this->width;
 
         return $area;   
