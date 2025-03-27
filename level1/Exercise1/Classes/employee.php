@@ -12,7 +12,7 @@ class Employee {
 
     public function print():void {
        
-        if($this->salary<6000){
+        if($this->salary<=6000){
             echo "Name: " . $this->name . PHP_EOL . "Taxes: Doesn't have to pay taxes." . PHP_EOL ;
         }else {
             echo "Name: " . $this->name . PHP_EOL . "Taxes: Have to pay taxes." . PHP_EOL ;
@@ -20,6 +20,5 @@ class Employee {
         
     }
 }
-
 
 ?>
