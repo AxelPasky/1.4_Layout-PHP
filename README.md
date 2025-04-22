@@ -10,6 +10,8 @@ This repository contains exercises designed to test knowledge of POO in PHP.
 
 ## 📁 Repository Structure
 - **level1** - Beginner exercises on PHP POO.
+- **level2** - Exercise to understand better static methods and the structure.
+- **level3** - Exercise with difficulties to locating methods.
 
 
 ## 🛠️ Technologies Used
@@ -23,4 +25,5 @@ This repository contains exercises designed to test knowledge of POO in PHP.
 - A local server like XAMPP, MAMP, or LAMP to run PHP scripts
 
 ## 👤 Author
-Developed by **AxelPasky**. Peer corrected **MichelleDiTerlizzi**.
+Developed by **AxelPasky**. Peer corrected level 1 **MichelleDiTerlizzi** .
+Level 2, 3  not peer corrected.
