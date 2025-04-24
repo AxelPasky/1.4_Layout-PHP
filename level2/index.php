@@ -10,17 +10,12 @@ $dice3= new PokerDice();
 $dice4= new PokerDice();
 $dice5= new PokerDice();
 
-$dice1->throw();
-echo $dice1->shapeName();
-$dice2->throw();
-echo $dice2->shapeName();
-$dice3->throw();
-echo $dice3->shapeName();
-$dice4->throw();
-echo $dice4->shapeName();
-$dice5->throw();
-echo $dice5->shapeName();
+$dices=[$dice1,$dice2,$dice3,$dice4,$dice5];
 
+foreach ($dices as $dice){
+    $dice->throw();
+    echo $dice->shapeName();
+}
 
 echo PHP_EOL . PokerDice:: getTotalThrows();
 

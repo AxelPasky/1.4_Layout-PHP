@@ -21,17 +21,16 @@ class Cinema {
     public function getInfo():string {
         return "Name cinema: " .$this->name . PHP_EOL . 
                "City: " . $this->city . PHP_EOL . 
-                $this->showMovie($this->movies) . PHP_EOL;
+                $this->showMovies() . PHP_EOL;
     }
 
-    public function showMovie(array $movies):string {
-        $output="";
-        foreach ($movies as $movie){
-           $output .= $movie . PHP_EOL;
+    public function showMovies(): string {
+        $output = "";
+        foreach ($this->movies as $movie) {
+            $output .= $movie . PHP_EOL;
         }
-
         return $output;
-        }
+    }
 
     public function getLongestMovie(): Movie {
         $longest = $this->movies[0];

@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 class PokerDice {
 
-    protected array $dice;
+    protected array $faces;
     protected static int $throws = 0;
     private int $lastThrow;
 
 
     public function __construct(){
 
-        $this->dice = ["A","K","Q","J","8","7"];
+        $this->faces = ["A","K","Q","J","8","7"];
         
     }
 
@@ -23,8 +23,8 @@ class PokerDice {
         
     
 
-    public function getDice(): array {
-        return $this->dice;
+    public function getFace(): array {
+        return $this->faces;
     }
 
     static function getTotalThrows():string{
@@ -34,7 +34,7 @@ class PokerDice {
     
 
     public function shapeName():string{
-        return $this->dice[$this->lastThrow] . " ";
+        return $this->faces[$this->lastThrow] . " ";
     }
 
 

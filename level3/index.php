@@ -4,7 +4,7 @@ declare(strict_types=1);
 require_once 'classes/cinema.php';
 require_once 'classes/movie.php';
 
-//------------------------------------------------------
+//---------------------------------
 
 function searchMovieDirector(array $cinemas, string $director): array {
     $films = [];
@@ -19,6 +19,20 @@ function searchMovieDirector(array $cinemas, string $director): array {
 
     return $films;
 }
+
+function showCinemaData(Cinema $cinema): void {
+    echo $cinema->getInfo() . PHP_EOL;
+    echo "The longest movie is:" . PHP_EOL . $cinema->getLongestMovie() . PHP_EOL;
+}
+
+function showMoviesByDirector(array $cinemas, string $director): void {
+    echo "Movies directed by $director:" . PHP_EOL;
+    $movies = searchMovieDirector($cinemas, $director);
+    foreach ($movies as $movie) {
+        echo $movie . PHP_EOL;
+    }
+}
+
 
 //----------------------------------
 
@@ -35,16 +49,11 @@ $cinema2 = new Cinema ("The Space", "Turin", $movieList);
 $cinemaList = [$cinema1,$cinema2];
 
 
-echo $cinema1->getInfo() . PHP_EOL;
+showCinemaData($cinema1);
+showCinemaData($cinema2);
 
-echo "The longest movie is: " . PHP_EOL . $cinema1->getLongestMovie() . PHP_EOL;
+showMoviesByDirector($cinemaList,"Christopher Nolan");
 
 
-echo "Movies directed by Christopher Nolan: " . PHP_EOL;
-$moviesByDirector = searchMovieDirector($cinemaList, "Christopher Nolan");
-
-foreach ($moviesByDirector as $movie) {
-    echo $movie . PHP_EOL;
-}
 
 ?>
