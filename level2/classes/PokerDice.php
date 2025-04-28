@@ -3,16 +3,9 @@ declare(strict_types=1);
 
 class PokerDice {
 
-    protected array $faces;
+    private const FACES = ['A', 'K', 'Q', 'J', '7', '8'];
     protected static int $throws = 0;
     private int $lastThrow;
-
-
-    public function __construct(){
-
-        $this->faces = ["A","K","Q","J","8","7"];
-        
-    }
 
     
     public function throw(): int {
@@ -21,11 +14,6 @@ class PokerDice {
             return $this->lastThrow;
     }
         
-    
-
-    public function getFace(): array {
-        return $this->faces;
-    }
 
     static function getTotalThrows():string{
         return "Total dice throws : " . static::$throws;
@@ -34,7 +22,7 @@ class PokerDice {
     
 
     public function shapeName():string{
-        return $this->faces[$this->lastThrow] . " ";
+        return self::FACES[$this->lastThrow] . " ";
     }
 
 
