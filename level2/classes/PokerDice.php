@@ -3,16 +3,16 @@ declare(strict_types=1);
 
 class PokerDice {
 
-    private const FACES = ['A', 'K', 'Q', 'J', '7', '8'];
+    private static array $faces = ['A', 'K', 'Q', 'J', '7', '8'];
     protected static int $throws = 0;
-    private int $lastThrow;
+    private int $currentFace;
 
     
-    public function throw(): int {
-            self::$throws++;
-            $this->lastThrow = rand(0, 5);
-            return $this->lastThrow;
+    public function throw(): void {
+        self::$throws++;
+        $this->currentFace = rand(0, 5);
     }
+    
         
 
     static function getTotalThrows():string{
@@ -22,7 +22,7 @@ class PokerDice {
     
 
     public function shapeName():string{
-        return self::FACES[$this->lastThrow] . " ";
+        return self::$faces[$this->currentFace] . " ";
     }
 
 
